@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Nuevo Alquiler</title>
+</head>
+<body>
+    <h1>Nuevo Alquiler</h1>
+    <form th:action="@{/guardar-alquiler}" th:object="${alquiler}" method="post">
+        <label for="cliente">Cliente:</label>
+        <select th:field="*{cliente}">
+            <option th:each="cliente : ${clientes}" th:value="${cliente.idCliente}" th:text="${cliente.nombre}"></option>
+        </select>
+        <br>
+
+        <label for="pelicula">Pelicula:</label>
+        <select th:field="*{pelicula}">
+            <option th:each="pelicula : ${peliculas}" th:value="${pelicula.idPelicula}" th:text="${pelicula.titulo}"></option>
+        </select>
+        <br>
+
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" th:field="*{cantidad}" min="1" required/>
+        <br>
+
+        <button type="submit">Procesar Alquiler</button>
+    </form>
+    <br>
+    <a href="/alquileres">Volver al listado</a>
+</body>
+</html>

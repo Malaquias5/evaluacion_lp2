@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Listado de Alquileres</title>
+</head>
+<body>
+    <h1>Listado de Alquileres</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Pelicula</th>
+                <th>Total</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="alquiler : ${alquileres}">
+                <td th:text="${alquiler.cliente.nombre}"></td>
+                <td th:text="${alquiler.pelicula.titulo}"></td>
+                <td th:text="${alquiler.total}"></td>
+                <td th:text="${alquiler.estado}"></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <a href="/nuevo-alquiler">Nuevo Alquiler</a>
+</body>
+</html>
