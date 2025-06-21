@@ -3,7 +3,7 @@
 Este sistema permite gestionar el alquiler de películas con interfaz web usando Spring Boot y Thymeleaf.
 
 ## Tecnologías utilizadas
-- Java 11
+- Java17
 - Spring Boot
 - Spring Web
 - Spring DevTools
@@ -18,7 +18,7 @@ Este sistema permite gestionar el alquiler de películas con interfaz web usando
 - Detalle de alquiler
 
 ## Base de datos
-La base de datos usada es `BD_T2_VILLANUEVA`. Contiene tablas con datos de prueba.
+La base de datos usada es `Peliculas`. Contiene tablas con datos de prueba.
 
 ## Autor
 Malaquias Félix Villanueva – Evaluación LP2
